@@ -1,7 +1,5 @@
-require "ans-seed/version"
-
 module Ans
   module Seed
-    # Your code goes here...
+    autoload :Restruct, "ans-seed/restruct"
   end
 end
