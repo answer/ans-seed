@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Ans::Seed::VERSION
   s.authors     = ["sakai shunsuke"]
   s.email       = ["sakai@ans-web.co.jp"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/answer/ans-seed"
+  s.summary     = %q{seed に関するユーティリティー}
+  s.description = %q{rails の db/seed.rb で使用するユーティリティー}
 
   s.rubyforge_project = "ans-seed"
 
@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "ans-gem-builder"
 end
