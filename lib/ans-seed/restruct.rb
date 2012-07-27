@@ -7,9 +7,17 @@ module Ans::Seed
 
     def update(hash)
       if entry = find(hash)
-        entry.update_attributes! updates_of(hash)
+        if role = @options[:as]
+          entry.update_attributes! updates_of(hash), as: role
+        else
+          entry.update_attributes! updates_of(hash)
+        end
       else
-        @model.create! hash
+        if role = @options[:as]
+          @model.create! hash, as: role
+        else
+          @model.create! hash
+        end
       end
     end
 
